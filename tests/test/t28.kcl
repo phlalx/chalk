@@ -1,0 +1,5 @@
+let c = [ "a" ] in
+if isnil c then
+   env.echo<"error\n">
+else
+   env.echo<"ok\n"> 

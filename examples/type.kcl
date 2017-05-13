@@ -1,0 +1,4 @@
+(* type.kcl *)
+new a : < proc > in
+a < { env.echo <"Hello World"> } > | 
+once a < x > { x }

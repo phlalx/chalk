@@ -1,0 +1,12 @@
+new a in
+new cell in
+
+cell [
+  once a up <  > {
+       reply "ok\n" to a
+  }
+]
+|
+
+env.echo < cell.a < >  > 
+

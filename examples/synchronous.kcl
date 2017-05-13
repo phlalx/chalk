@@ -1,0 +1,7 @@
+(* synchronous.kcl *)
+new a in
+( new r in
+  a < "hello ", "world\n", r > |
+  once r < x > { env.echo < x >  }
+) |
+once a < x, y, r > { r < x ^ y > }

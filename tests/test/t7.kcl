@@ -1,0 +1,20 @@
+new a in
+new b in
+new c in
+new u in
+new r in
+new r1 in
+new v in
+new u1 in
+
+a.r < { on v<x> { env.u<x> } } > | 
+on u1 dn <x> { env.echo<x> } |
+
+a  [ 
+    on r up <X> { b.r1< X > } | 
+    on u dn <x> { env.u1< x >}  | 
+    b [
+        v <"ok\n">  | 
+        on r1 up <X> { X }  
+      ]
+   ]

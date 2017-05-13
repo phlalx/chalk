@@ -1,0 +1,881 @@
+<h1> Typechecking</h1>
+<html>
+ <head>
+ <title>t40.html  </title>
+ </head>
+<body>
+<table  border = "1" ><tr VALIGN=top><td>
+<font color="#7f0000"><tt>new</tt></font> <tt>fact</tt> <font color="#7f0000"><tt>:</tt></font><tt>?X1</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>fact</tt><font color="#7f0000"><tt>&lt</tt></font><tt>i</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>reply</tt></font> <font color="#00007f"><tt>1</tt></font> <font color="#7f0000"><tt>to</tt></font> <tt>fact</tt><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>reply</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>*</tt></font><tt>fact</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>to</tt></font> <tt>fact</tt><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<font color="#7f0000"><tt>|</tt></font><br>
+<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>fact</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>120</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>env</tt></font><font color="#7f0000"><tt>.</tt></font><tt>echo</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#3f3f3f"><tt>"ok
+"</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>nil</tt></font><br>
+</td><td><table>
+<tr><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><tr>
+<tr><td><small><tt>?X1</tt></small></td><td><small><font color="#7f0000"><tt>&lt</tt></font><tt>?X2</tt><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><tt>?X3</tt><font color="#7f0000"><tt>(</tt></font><tt>?X4</tt><font color="#7f0000"><tt>)</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>reply</tt></font></small></td><td><small><tt>?X13</tt></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>reply</tt></font></small></td><td><small><tt>?X13</tt></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>bool</tt></font></small></td><td><small><font color="#7f0000"><tt>bool</tt></font></small></td><tr>
+<tr><td><small><tt>?X2</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X1</tt></small></td><td><small><font color="#7f0000"><tt>&lt</tt></font><tt>?X6</tt><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><font color="#7f0000"><tt>int</tt></font><font color="#7f0000"><tt>(</tt></font><font color="#7f0000"><tt>sync</tt></font><font color="#7f0000"><tt>)</tt></font></small></td><tr>
+<tr><td><small><tt>?X1</tt></small></td><td><small><font color="#7f0000"><tt>&lt</tt></font><tt>?X12</tt><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><font color="#7f0000"><tt>int</tt></font><font color="#7f0000"><tt>(</tt></font><font color="#7f0000"><tt>sync</tt></font><font color="#7f0000"><tt>)</tt></font></small></td><tr>
+<tr><td><small><tt>?X2</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X10</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X1</tt></small></td><td><small><font color="#7f0000"><tt>&lt</tt></font><tt>?X9</tt><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><tt>?X10</tt><font color="#7f0000"><tt>(</tt></font><tt>?X11</tt><font color="#7f0000"><tt>)</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>int</tt></font></small></td><td><small><tt>?X9</tt></small></td><tr>
+<tr><td><small><tt>?X2</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>int</tt></font></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><td><small><tt>?X20</tt></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><td><small><tt>?X20</tt></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>bool</tt></font></small></td><td><small><font color="#7f0000"><tt>bool</tt></font></small></td><tr>
+<tr><td><small><tt>?X15</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X1</tt></small></td><td><small><font color="#7f0000"><tt>&lt</tt></font><tt>?X14</tt><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><tt>?X15</tt><font color="#7f0000"><tt>(</tt></font><tt>?X16</tt><font color="#7f0000"><tt>)</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>int</tt></font></small></td><td><small><tt>?X14</tt></small></td><tr>
+<tr><td><small><tt>?X19</tt></small></td><td><small><font color="#7f0000"><tt>async</tt></font></small></td><tr>
+<tr><td><small><tt>?X18</tt></small></td><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>string</tt></font><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><font color="#7f0000"><tt>proc</tt></font><font color="#7f0000"><tt>(</tt></font><font color="#7f0000"><tt>async</tt></font><font color="#7f0000"><tt>)</tt></font></small></td><td><small><font color="#7f0000"><tt>&lt</tt></font><tt>?X17</tt><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><tt>?X18</tt><font color="#7f0000"><tt>(</tt></font><tt>?X19</tt><font color="#7f0000"><tt>)</tt></font></small></td><tr>
+<tr><td><small><font color="#7f0000"><tt>string</tt></font></small></td><td><small><tt>?X17</tt></small></td><tr>
+</table>
+</td><td><table>
+<tr><td><small><tt>?X17</tt></small></td><td><small><font color="#7f0000"><tt>string</tt></font></small></td><tr>
+<tr><td><small><tt>?X18</tt></small></td><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><tr>
+<tr><td><small><tt>?X19</tt></small></td><td><small><font color="#7f0000"><tt>async</tt></font></small></td><tr>
+<tr><td><small><tt>?X14</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X16</tt></small></td><td><small><font color="#7f0000"><tt>sync</tt></font></small></td><tr>
+<tr><td><small><tt>?X15</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X20</tt></small></td><td><small><font color="#7f0000"><tt>proc</tt></font></small></td><tr>
+<tr><td><small><tt>?X9</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X11</tt></small></td><td><small><font color="#7f0000"><tt>sync</tt></font></small></td><tr>
+<tr><td><small><tt>?X10</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X12</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X6</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X3</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X4</tt></small></td><td><small><font color="#7f0000"><tt>sync</tt></font></small></td><tr>
+<tr><td><small><tt>?X2</tt></small></td><td><small><font color="#7f0000"><tt>int</tt></font></small></td><tr>
+<tr><td><small><tt>?X13</tt></small></td><td><small><font color="#7f0000"><tt>reply</tt></font></small></td><tr>
+<tr><td><small><tt>?X1</tt></small></td><td><small><font color="#7f0000"><tt>&lt</tt></font><tt>?X2</tt><font color="#7f0000"><tt>&gt</tt></font><font color="#7f0000"><tt>-></tt></font><tt>?X3</tt><font color="#7f0000"><tt>(</tt></font><tt>?X4</tt><font color="#7f0000"><tt>)</tt></font></small></td><tr>
+</table>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>0</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>fact</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>fact</tt><font color="#7f0000"><tt>&lt</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>reply</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>reply</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>fact</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<font color="#7f0000"><tt>new</tt></font> <tt>?name2</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name2</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var1</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>120</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>env.</tt></font><tt><span title= " 1 " >echo</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#3f3f3f"><tt>"ok
+"</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>nil</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt>fact</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name2</tt><font color="#7f0000"><tt>,</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+<br>
+</td></tr></table></td><td></td></tr></table><hr><h1> State <font color="#00007f"><tt>1</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>reply</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>reply</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<font color="#7f0000"><tt>new</tt></font> <tt>?name2</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name2</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var1</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>120</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>env.</tt></font><tt><span title= " 1 " >echo</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#3f3f3f"><tt>"ok
+"</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>nil</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name2</tt><font color="#7f0000"><tt>,</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;New : Bind name <tt>fact</tt> to new identifier <font color="#00007f"><tt>1027</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>2</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>?name2</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name2</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var1</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>120</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>env.</tt></font><tt><span title= " 1 " >echo</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#3f3f3f"><tt>"ok
+"</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>nil</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name2</tt><font color="#7f0000"><tt>,</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>reply</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>reply</tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt>i</tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Parallel composition.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>3</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>?name2</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name2</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var1</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>120</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>env.</tt></font><tt><span title= " 1 " >echo</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#3f3f3f"><tt>"ok
+"</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>nil</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name2</tt><font color="#7f0000"><tt>,</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Trigger on channel: <font color="#00007f"><tt>1027</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1027</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:trigger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: NoReac<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>4</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1028 " >?name2</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var1</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>120</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>env.</tt></font><tt><span title= " 1 " >echo</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#3f3f3f"><tt>"ok
+"</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>nil</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1028 " >?name2</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;New : Bind name <tt>?name2</tt> to new identifier <font color="#00007f"><tt>1028</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>5</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1028 " >?name2</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1028 " >?name2</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var1</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>120</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>env.</tt></font><tt><span title= " 1 " >echo</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#3f3f3f"><tt>"ok
+"</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>nil</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Parallel composition.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>6</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1028 " >?name2</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#00007f"><tt>5</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Trigger on channel: <font color="#00007f"><tt>1028</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1028</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:trigger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: NoReac<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>7</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1028 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt><span title= " 1028 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Message on channel: <font color="#00007f"><tt>1027</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1027</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:message<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: Reaction<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>8</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1028 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;If-Then-Else : evaluate if condition to <font color="#7f0000"><tt>false</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>9</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1029 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1028 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1029 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;New : Bind name <tt>?name4</tt> to new identifier <font color="#00007f"><tt>1029</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>10</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1029 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1029 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1028 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Parallel composition.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>11</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1029 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 5 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Trigger on channel: <font color="#00007f"><tt>1029</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1029</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:trigger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: NoReac<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>12</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1029 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt><span title= " 1029 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Message on channel: <font color="#00007f"><tt>1027</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1027</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:message<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: Reaction<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>13</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1029 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;If-Then-Else : evaluate if condition to <font color="#7f0000"><tt>false</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>14</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1030 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1029 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1030 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;New : Bind name <tt>?name4</tt> to new identifier <font color="#00007f"><tt>1030</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>15</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1030 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1030 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1029 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Parallel composition.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>16</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1030 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 4 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Trigger on channel: <font color="#00007f"><tt>1030</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1030</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:trigger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: NoReac<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>17</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1030 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt><span title= " 1030 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Message on channel: <font color="#00007f"><tt>1027</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1027</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:message<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: Reaction<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>18</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1030 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;If-Then-Else : evaluate if condition to <font color="#7f0000"><tt>false</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>19</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1031 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1030 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1031 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;New : Bind name <tt>?name4</tt> to new identifier <font color="#00007f"><tt>1031</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>20</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1031 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1031 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1030 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Parallel composition.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>21</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1031 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 3 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Trigger on channel: <font color="#00007f"><tt>1031</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1031</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:trigger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: NoReac<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>22</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1031 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt><span title= " 1031 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Message on channel: <font color="#00007f"><tt>1027</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1027</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:message<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: Reaction<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>23</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1031 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;If-Then-Else : evaluate if condition to <font color="#7f0000"><tt>false</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>24</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1032 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1031 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1032 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;New : Bind name <tt>?name4</tt> to new identifier <font color="#00007f"><tt>1032</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>25</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1032 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1032 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1031 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Parallel composition.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>26</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1032 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 2 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1032</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Trigger on channel: <font color="#00007f"><tt>1032</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1032</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:trigger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: NoReac<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>27</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>if</tt></font> <font color="#7f0000"><tt>(</tt></font><tt><span title= " 1 " >i</span></tt><font color="#7f0000"><tt>=</tt></font><font color="#00007f"><tt>0</tt></font><font color="#7f0000"><tt>)</tt></font> <font color="#7f0000"><tt>then</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1032 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>else</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt><span title= " 1032 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 1 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+&nbsp;&nbsp;&nbsp;<font color="#7f0000"><tt>}</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 1 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1032</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;Message on channel: <font color="#00007f"><tt>1027</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Get reaction queue for key: (<font color="#00007f"><tt>1027</tt></font>,lc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push reactant:message<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reaction to be performed: Reaction<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>28</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>new</tt></font> <tt>?name4</tt> <font color="#7f0000"><tt>in</tt></font><br>
+<font color="#7f0000"><tt>once</tt></font> <tt>?name4</tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1032 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 1 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?name4</tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 1 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1032</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;If-Then-Else : evaluate if condition to <font color="#7f0000"><tt>false</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr><h1> State <font color="#00007f"><tt>29</tt></font></h1>
+<table  border = "0" ><tr VALIGN=top><td>
+<h3> Location  <tt>Top</tt> <font color="#00007f"><tt>1026</tt></font></h3>
+<table  border = "0" ><tr VALIGN=top><td>
+<h4> Runqueue</h4>
+<ul>
+<li>
+<code> <font color="#7f0000"><tt>once</tt></font> <tt><span title= " 1033 " >?name4</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt>?var3</tt><font color="#7f0000"><tt>&gt</tt></font> <font color="#7f0000"><tt>{</tt></font><br>
+&nbsp;&nbsp;&nbsp;<tt><span title= " 1032 " >reply</span></tt><font color="#7f0000"><tt>&lt</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 1 " >i</span></tt><font color="#7f0000"><tt>*</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+<font color="#7f0000"><tt>}</tt></font><br>
+<tt><span title= " 1027 " >fact</span></tt><font color="#7f0000"><tt>&lt</tt></font><tt><span title= " 1033 " >?name4</span></tt><font color="#7f0000"><tt>,</tt></font><font color="#7f0000"><tt>(</tt></font><tt><span title= " 1 " >i</span></tt><font color="#7f0000"><tt>-</tt></font><font color="#00007f"><tt>1</tt></font><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>&gt</tt></font><br>
+</code>
+</li>
+</ul>
+</td><td><h4> Tables</h4>
+(<font color="#00007f"><tt>1031</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1030</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1029</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1028</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var1</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1027</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>reply</tt><font color="#7f0000"><tt>,</tt></font><tt>i</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+(<font color="#00007f"><tt>1032</tt></font>,lc):<font color="#7f0000"><tt>(</tt></font><tt>?var3</tt><font color="#7f0000"><tt>)</tt></font><font color="#7f0000"><tt>{ code }</tt></font> <br>
+<br>
+</td></tr></table></td><td>Reduce location<font color="#00007f"><tt>1026</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Pop runqueue.<br>
+&nbsp;&nbsp;&nbsp;New : Bind name <tt>?name4</tt> to new identifier <font color="#00007f"><tt>1033</tt></font>.<br>
+&nbsp;&nbsp;&nbsp;Push closure in runqueue of location <font color="#00007f"><tt>1026</tt></font>.<br>
+</td></tr></table><hr></body>
+ </html>

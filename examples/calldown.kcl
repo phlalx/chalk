@@ -1,0 +1,8 @@
+new plus in new a in
+a [
+  on plus up < x, y > {
+    reply (x + y) to plus   
+  }
+]
+|
+env.echo_int < a.plus<1,2> >

@@ -1,0 +1,2 @@
+env.send<vm ("120.0.0.0",12),"hello"> |
+env.echo<"ok\n">

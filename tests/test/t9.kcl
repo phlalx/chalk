@@ -1,0 +1,9 @@
+(* polyadicity *)
+new a in
+new b in
+
+b < "o", "k\n" > 
+|
+on b < x > { a < x > }  
+|
+on a < x, y > { env.echo < x ^ y > } 

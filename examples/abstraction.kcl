@@ -1,0 +1,4 @@
+(* abstraction.kcl *)
+new a in
+a < (x){ env.echo <x> } > | 
+once a < x > { x @ "Hello World"} 

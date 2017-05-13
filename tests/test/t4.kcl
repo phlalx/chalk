@@ -1,0 +1,5 @@
+(* passivation *)
+new a in 
+once a [ x ] { x }  |
+a [ env.echo < "ok\n" > ]  
+

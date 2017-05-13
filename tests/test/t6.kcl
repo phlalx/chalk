@@ -1,0 +1,5 @@
+(* higher order communication *)
+new a in 
+a < { env.echo <"ok\n"> } > | 
+on a<X> { X } 
+

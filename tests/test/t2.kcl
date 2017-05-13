@@ -1,0 +1,11 @@
+(* communication down *)
+new a in 
+new b in
+
+b [
+  env.a < "ok\n" > 
+]
+|
+once a dn < x >  { env.echo <x> }
+
+

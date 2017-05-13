@@ -1,0 +1,6 @@
+new plus in
+on plus < x, y > {
+   reply (x + y) to plus   
+}
+|
+env.echo_int < plus <1,2> >

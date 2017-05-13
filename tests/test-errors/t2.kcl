@@ -1,0 +1,9 @@
+new a in
+new b in
+
+def a <  >  {
+   if true then
+     reply 0 to a
+   else 
+     reply 1 to b 
+}

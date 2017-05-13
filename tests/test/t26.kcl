@@ -1,0 +1,10 @@
+new a in 
+new cont in
+
+a < "o", cont > 
+|
+once cont < > { env.echo< "k\n" > } 
+|
+once a < x, cont > { env.echo < x > | cont <> }
+
+

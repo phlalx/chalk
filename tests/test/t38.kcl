@@ -1,0 +1,13 @@
+new a in
+new cell in
+
+once echo dn < x > { env.echo < x > } |
+
+once a dn <  > {
+       reply "ok\n" to a
+}
+
+|
+cell [
+  env.echo < env.a < >  > 
+]

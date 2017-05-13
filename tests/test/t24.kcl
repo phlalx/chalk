@@ -1,0 +1,9 @@
+let X = { env.echo <"ok\n"> } in
+
+let c = marshall X : proc  in
+
+let d = "hello" in
+
+let Y = unmarshall c as proc in
+
+ Y  

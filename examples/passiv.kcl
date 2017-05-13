@@ -1,0 +1,14 @@
+(* passiv.kcl *)
+new a in new signal in
+a [
+  on signal < i > {
+     signal < i + 1 > | env.signal < i > 
+  } | 
+  signal < 0 > 
+] | 
+on signal dn < i > { 
+  if i = 10 then
+     once a [ x ] { nil }	
+  else 
+     env.echo_int < i >
+}

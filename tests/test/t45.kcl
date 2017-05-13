@@ -1,0 +1,19 @@
+(* communication *)
+new a in
+new b in
+new l in
+
+once l [ x ] { l [ x ] }  
+ |
+l.a < > 
+ |
+l.b < > 
+ |
+once a dn < > { once b dn < > { env.echo <"ok\n" > } } 
+ |
+l [
+   once a up < > { env.a < > }
+|  once b up < > { env.b < > }
+]
+
+

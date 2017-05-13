@@ -1,0 +1,24 @@
+new a in new signal in new move in
+
+let serverid = vm ("localhost", 8000) in
+
+a [ 
+ on signal < i > {
+   if i = 5 then
+      env.move < > | signal < i +1 > 
+   else if i = 10 then
+       nil
+   else
+       ( env.echo_int < i > | signal < i + 1 > )
+ } |
+ signal < 0 >
+]
+|
+once move dn < > {
+  once a [ x ] {
+     env.send < serverid, marshall x : proc > 
+  }
+}
+|
+on echo_int dn < x > { env.echo_int < x > }
+

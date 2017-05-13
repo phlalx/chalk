@@ -1,0 +1,12 @@
+new a in
+new b in
+new c in
+
+a < "o" > | a < "o" > | a <"o" > |
+ b < "k\n" > | b < "k\n" > |
+
+once a < x > {
+   once b < y > {
+      env.echo < x ^ y >
+   }
+}

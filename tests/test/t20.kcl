@@ -1,0 +1,4 @@
+if 2 * 3 * 4  - 12 - 12 = 0 then
+   env.echo < "ok\n" >
+ else
+   env.echo <"error\n"> 

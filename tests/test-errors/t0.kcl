@@ -1,0 +1,6 @@
+new a in
+new b in
+
+def a dn x < x > | b < y > {
+   nil
+}

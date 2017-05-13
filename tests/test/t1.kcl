@@ -1,0 +1,5 @@
+(* communication *)
+new a in 
+a < "ok\n" > |
+a < "ok\n" > |
+once a < x > { env.echo < x > }

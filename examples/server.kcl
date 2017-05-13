@@ -1,0 +1,4 @@
+
+on receive up < s > { 
+   let agent = unmarshall s as proc in agent
+}

@@ -1,0 +1,14 @@
+
+new fact in
+
+on fact < i > {
+   if i = 0 then
+      reply 1 to fact
+   else
+      reply i * fact < i - 1 >  to fact 
+}
+|
+if fact < 5 > = 120 then
+   env.echo < "ok\n" >
+else
+   nil 

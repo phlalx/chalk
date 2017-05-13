@@ -1,0 +1,8 @@
+new a in
+
+on a < x > {
+   reply x to a
+}
+|
+env.echo < a < "o" > ^ a <"k\n" >  > 
+

@@ -1,0 +1,7 @@
+new a in
+once a <  > {
+     reply "ok\n" to a
+}
+|
+env.echo < a < >  > 
+

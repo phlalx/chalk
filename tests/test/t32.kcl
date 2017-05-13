@@ -1,0 +1,3 @@
+(* Application  *)
+
+( x : string ) { env.echo < x > } @ "ok\n"

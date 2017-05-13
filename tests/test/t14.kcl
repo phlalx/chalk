@@ -1,0 +1,3 @@
+(* if then else *)
+
+if true then env.echo <"ok\n"> else env.echo< "error\n" > 

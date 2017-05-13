@@ -1,0 +1,4 @@
+#!/bin/bash
+for file in `ls t*.kcl | sort -n -k1.2`; do
+  echo "run $file : `../../chalk $file` ";
+done

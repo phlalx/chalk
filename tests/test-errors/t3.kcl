@@ -1,0 +1,6 @@
+new b in
+new c in
+
+def  b <  > {
+     reply 0 to c
+}

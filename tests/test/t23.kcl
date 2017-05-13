@@ -1,0 +1,15 @@
+new a : kell in
+new r : < string > in
+new s in
+new c in
+new d in
+
+once echo dn <x> { env.echo <x> } | 
+
+c.r < "ok\n" > |
+
+once a [ x ] {
+  c [ x ] | d [ x ] 
+ } |
+
+a [ once r up < x > { env.echo < x > } ]

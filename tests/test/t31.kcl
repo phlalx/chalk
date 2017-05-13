@@ -1,0 +1,12 @@
+new a in
+new b in
+new r in
+new s in
+
+once echo dn < x > { env.echo < x > } 
+|
+b.r < "ok\n" >
+|
+once a [ x ] { b [ x ] } 
+|
+a [ once r up < x > { env.echo < x > } ]

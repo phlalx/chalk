@@ -1,0 +1,8 @@
+(* lists *)
+
+let a = [ 23 ] in
+if isnil a then
+     env.echo <"error\n">
+else 
+    env.echo <"ok\n">
+

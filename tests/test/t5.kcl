@@ -1,0 +1,14 @@
+(* passivation *)
+new a in
+new b in
+new v in
+
+once v < x > { env.echo <x> } 
+| 
+once a [ x ] { x } 
+|
+once b [ x ] { x }  
+|
+a [ b [ v< "ok\n"  > ]  ]  
+
+

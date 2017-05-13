@@ -1,0 +1,17 @@
+(* communications *)
+
+new a in
+new b in
+new c in
+new r in
+new s in
+
+once r < x, y  > { 
+   y [ a < { env.echo < x > } > ] 
+} 
+|
+r < "ok\n", c  > 
+|
+once c [ x ] { x } 
+|
+once a < x > { x }  

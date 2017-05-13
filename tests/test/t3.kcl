@@ -1,0 +1,13 @@
+(* communications *)
+
+new a in 
+new signal in
+new b in
+
+b [
+   once a up < > { env.signal <"ok\n" > }
+]
+| 
+b.a < > 
+| 
+once signal dn < x > { env.echo < x > }

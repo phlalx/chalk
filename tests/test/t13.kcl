@@ -1,0 +1,28 @@
+new plus in
+new a in
+new b in
+
+new sendb in
+new senda in
+
+on sendb dn < X > { b.sendb < X > } |
+on senda dn < X > { a.senda < X > } |
+on echo dn <x> { env.echo<x> } |
+
+a  [   
+  new res : < int > in
+  env.sendb < { plus < 3, 4, res > } > |
+  on senda up < X > { X } | 
+  on res < x > { 
+    if x = 7 then
+       env.echo < "ok\n" > 
+    else
+       env.echo < "ok\n" > 
+  }
+]  
+|
+b  [
+       on sendb up < X > { X } |
+       on plus < x, y, res > { env.senda < { res < x + y  > } > }
+]
+

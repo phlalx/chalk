@@ -1,0 +1,12 @@
+(* unit, <>, () and "" *)
+new b in
+new c in
+new d in
+new a : <> in
+new b : < unit > in 
+a < > | b < ()  > | c < > | d < () > |
+on a < x > { 
+  on b < > { 
+    on c < > { 
+      on d < x > { 
+        env.echo < "ok\n" > }}}}

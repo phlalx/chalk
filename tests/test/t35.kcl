@@ -1,0 +1,12 @@
+new a in
+new openme  in
+
+once echo <x> { env.echo < x > }
+ |
+once openme dn y < x > { once y [ x ] { x } }
+ |
+a [
+   echo <"ok\n"> |
+   env.openme <a >
+]
+

@@ -1,0 +1,5 @@
+let c = [ "ok\n" ] in
+if isnil c then
+   env.echo<"error\n">
+else
+   env.echo< head c > 

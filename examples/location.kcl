@@ -1,0 +1,9 @@
+(* location.kcl *)
+new a in new signal in new b in
+b [
+   once a up < > { env.signal < > }
+]
+| 
+b.a < > 
+| 
+once signal dn < > { env.echo < "Hello World" > }

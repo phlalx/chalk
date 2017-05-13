@@ -1,0 +1,11 @@
+(* tuple of tuple *)
+new a in 
+new b in
+a < ("o", "k"), "\n" > |
+
+on a < x, y > { 
+   b < x > |
+   on b < u, v > { 
+      env.echo <u ^ v ^ y > 
+   }
+}

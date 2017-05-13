@@ -1,0 +1,9 @@
+(* if then else, bool *)
+new c in
+on c < x > { 
+   if x then 
+      env.echo <"ok\n"> 
+   else 
+      env.echo< "error\n" >  
+}
+| c < true > 

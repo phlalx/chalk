@@ -1,0 +1,5 @@
+(* simplemessage.kcl *)
+new a in
+a<"Hello\n"> |
+a<"World\n"> | 
+on a<x> { env.echo<x> }

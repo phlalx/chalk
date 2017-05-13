@@ -1,0 +1,10 @@
+(* upmsg.kcl *)
+new a in new signal in new b in
+b [ env.signal < > ] | 
+a [ env.signal < > ] | 
+once signal dn x < > {
+  if x = a then
+     env.echo < "a" > 
+  else
+     env.echo < "b" >
+}

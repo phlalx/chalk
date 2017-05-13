@@ -1,0 +1,6 @@
+new a in
+
+a < ( x : string )( y : string ) { env.echo < x ^ y > } > |
+once a < x > {
+    x @ "o" @ "k\n"
+}

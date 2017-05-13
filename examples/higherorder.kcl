@@ -1,0 +1,4 @@
+(* higherorder.kcl *)
+new a in
+a < { env.echo <"Hello World\n"> } > | 
+once a < x > { x }

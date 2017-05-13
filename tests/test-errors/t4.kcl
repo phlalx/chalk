@@ -1,0 +1,6 @@
+new a in
+
+def a <  >  {
+     new a in 
+        reply 0 to a
+}

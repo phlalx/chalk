@@ -1,0 +1,3 @@
+(* let *)
+
+let x = "ok\n" in env.echo < x > 
